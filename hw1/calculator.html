@@ -6,33 +6,32 @@
 </head>
 <body>
     <script>
-        var a = prompt("Введите любое число");
+        var a = +prompt("Введите любое число");
         var c = prompt("Введите любой из операторов: +, -, *, /, %, ^", "+, -, * /, ^ или %");
-        var b = prompt("Введите второе число");
+        var b = +prompt("Введите второе число");
 
 
         switch (c) {
             case ("+"):
-                document.write("Сумма Ваших чисел: " + (Number(a) + Number(b)));
+                document.write("Сумма Ваших чисел: " + (a + b));
                 break;
             case ("-"):
-                document.write("Разница Ваших чисел: " + (Number(a) - Number(b)));
+                document.write("Разница Ваших чисел: " + (a - b));
                 break;
             case ("*"):
-                document.write("Произведение Ваших чисел: " + (a*b));//Нужно ли при умножении и делении явно задавать тип данных?
+                document.write("Произведение Ваших чисел: " + (a*b));
                 break;
             case ("/"):
-                if (b !== 0) { //Такая запись через if вообще приемлема?
-                    document.write("Частное Ваших чисел: " + (Number(a) / Number(b)));
-                } else if (b === 0) {
-                    document.write("На ноль делить нельзя"); //Выдаёт Infinity, что нужно сделать, чтобы выдавало текст "На ноль делить нельзя"?
-                }
+                    while (b === 0) {
+                        b = +prompt("Введите второе число, отменное от 0");
+                    }
+                document.write("Частное Ваших чисел: " + (a / b));
                 break;
             case ("%"):
-                document.write("Результат деления по модулю Ваших чисел: " + (Number(a) % Number(b)));
-                break;
-            case ("%" && b === 0):// Такая запись приемлема?
-                document.write("На ноль делить нельзя");
+                while (b === 0) {
+                    b = +prompt("Введите второе число, отменное от 0");
+                }
+                document.write("Результат деления по модулю Ваших чисел: " + (a % b));
                 break;
             case ("^"):
                 document.write("Число " + a + ", возведённое в степень " + b + " равняется " + (Math.pow(a, b)));
