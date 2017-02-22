@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upgraded Calculator</title>
+</head>
+<body>
+    <script>
+        function sum(x, y) {
+            var result = x + y;
+            document.write("Сумма Ваших чисел: " + result);
+        }
+        function difference(x, y) {
+            var result = x - y;
+            document.write("Разница Ваших чисел: " + result);
+        }
+        function multi (x, y) {
+            var result = x * y;
+            document.write("Произведение Ваших чисел: " + result);
+        }
+        function devide(x, y) {
+            var result = x / y;
+            document.write("Частное Ваших чисел: " + result);
+        }
+        function modul(x, y) {
+            var result = x % y;
+            document.write("Результат деления по модулю Ваших чисел: " + result);
+
+        }
+        function power(x, y) {
+            var result = Math.pow(x, y);
+            document.write("Число " + a + ", возведённое в степень " + b + ", равняется " + result);
+        }
+
+        var a = +prompt("Введите любое число");
+        var c = prompt("Введите любой из операторов: +, -, *, /, %, ^", "+, -, * /, ^ или %");
+        var b = +prompt("Введите второе число");
+
+        switch (c) {
+            case ("+"):
+                sum(a, b);
+                break;
+            case ("-"):
+                difference(a, b);
+                break;
+            case ("*"):
+                multi(a, b);
+                break;
+            case ("/"):
+                while (b === 0) {
+                    b = +prompt("Введите второе число, отменное от 0");
+                }
+                devide(a, b);
+                break;
+            case ("%"):
+                while (b === 0) {
+                    b = +prompt("Введите второе число, отменное от 0");
+                }
+                modul(a, b);
+                break;
+            case ("^"):
+                power(a, b);
+                break;
+            default:
+                document.write("Вы ввели неверные данные!");
+                break;
+        }
+
+    </script>
+
+
+</body>
+</html>
