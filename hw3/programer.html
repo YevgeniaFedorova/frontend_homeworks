@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Constructor Programmer</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function Programer(a, b, c, d) {
+            this.name = a;
+            this.age = b;
+            this.position = c;
+            this.langs = d;
+        }
+
+//        Programer.prototype.changePosition = function(field) { - я не очень понимаю, что этот метож должен делать, как именно нужно заменить поле профессии?
+//            return this.position = this.field;
+//        }
+
+        Programer.prototype.toString = function () {
+            return this.name + '<br>' + this.age + '<br>' + this.position + '<br>' + this.langs + '<br>';
+        }
+
+        var person1 = new Programer('John', 23, 'manager', 'eng');
+        var person2 = new Programer('Kate', 25, 'developer', 'ru');
+
+        document.write(person1 + '<br>');
+        document.write(person2 + '<br>');
+
+    </script>
+</body>
+</html>

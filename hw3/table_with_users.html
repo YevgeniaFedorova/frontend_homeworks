@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table with users</title>
+</head>
+<body>
+    <script>
+        //Далее следует кусок кода из предыдущей домашки
+        var persons = [];
+
+        var person = {
+            name: '',
+            sname: '',
+            age: ''
+        };
+
+        function ask() {
+            person.name = prompt("Введите свое имя:");
+            person.sname = prompt("Введите свою фамилию:");
+            person.age = prompt("Введите свой возраст:");
+            persons.push(person);
+        }
+
+        function say() {
+            document.write("Имя: " + person.name + "<br />");
+            document.write("Фамилия: " + person.sname + "<br />");
+            document.write("Возраст: " + person.age + "<br />");
+            document.write("<hr/>");
+        }
+
+        for(var i = 0; i < persons.length; i++)
+            for(item in persons[i])
+                console.log(persons[i][item]);//Вопрос! Почему мы здесь убрали фигурные скобки. После этого в консоли не отображается Object. Для этого и делали?
+
+        function show(array) {
+            for(var i = 0; i < array.length; i++)
+                for (j in array[i]) {
+                    document.write(array[i][j] + "<br>")
+                }
+        }
+        // Вызов функций.
+        ask();
+        say();
+        show(persons);
+
+
+        //Дальше идёт то, что мы записывали на уроке, и, соответственно, вопросы
+        list = [1, 2, 3, 4, 5, 6]; //Вот это ничего не выводит, поэтому я не могу разобраться как делать таблицу.
+        var table = createElement('table');
+        var row = createElement('tr');
+        table.appendChild(row);
+        var cell = createElement('td');
+
+        var elements = list.map(function(item) {
+            cell.innerHTML = item;
+            return cell;
+        });
+        row.appendChild(elements);
+        document.write(elements);
+
+        persons.map(function(item) {
+            for(j in item) {
+                document.write(j + "=" + item[j] + '<br>');
+            }
+        })
+    </script>
+</body>
+</html>

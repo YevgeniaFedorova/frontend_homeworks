@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sort Function</title>
+</head>
+<body>
+    <script>
+
+        var arr = [19, 10, 15, 4, 1 , 8, 9];
+
+        function SelectionSort(A)       // A - массив, который нужно
+        {                               // отсортировать по возрастанию.
+            var n = A.length;
+            for (var i = 0; i < n-1; i++) {
+                var min = i;
+                for (var j = i+1; j < n; j++) {
+                    if (A[j] < A[min]) min = j;
+                }
+                var t = A[min];
+                A[min] = A[ i ];
+                A[ i ] = t;
+            }
+            return A;    // На выходе сортированный по возрастанию массив A.
+        }
+
+        document.write(SelectionSort(arr));
+
+
+        //Сортировка по какому-то принципу
+
+
+        var a = [8, 6, 12, 15, 1, 4, 25];
+        function sortFunction(a, b){
+           if (a < b) {
+               return -1;
+           } else if (a > b) {
+                return 1;
+           } else {
+                return 0;
+            }
+        }
+
+        a.sort(sortFunction);
+        document.write(a + '<br>');
+
+        var b = ['apple', 'orange', 'banana', 'kiwi', 'dragon fruit'];
+
+        function compareStrings(str1, str2) {
+            // обычное сравнение строк или чисел
+            var compare = function(a, b) {
+                return (a < b) ? -1 : (a > b) ? 1 : 0;
+            };
+            // разделяем строки; splitString() напишем позже
+            var parts1 = splitString(str1);
+            var parts2 = splitString(str2);
+            // перебираем части до минимальной длины
+            var minLength = Math.min(parts1.length, parts2.length);
+            for (var i = 0; i < minLength; i++) {
+                // здесь будем сравнивать части с одинаковыми индексами
+            }
+            // если в одной из строк частей больше и при этом
+            // все, кроме "лишних", совпадают с другой строкой, то эта строка "больше"
+            return compare(parts1.length, parts2.length);
+        }
+
+
+        b.sort(CompareStrings);
+        document.write(b);
+
+
+
+    </script>
+</body>
+</html>

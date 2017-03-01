@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator with callback function</title>
+</head>
+<body>
+    <script>
+        var sum = function(x, y) {
+            return x + y;
+        };
+        var diff = function(x, y) {
+            return x - y;
+        };
+        var multi = function(x, y) {
+            return x * y;
+        };
+        var dev = function(x, y) {
+            return x / y;
+        };
+        var modul = function(x, y) {
+            return x % y;
+        };
+        var power = function(x, y) {
+            return Math.pow(x, y);
+        };
+
+        function show(callback, x, y) {
+            var result = callback(x, y);
+            document.write('Результат операции: ' + result);
+        }
+
+        var a = +prompt("Введите любое число");
+        var c = prompt("Введите любой из операторов: +, -, *, /, %, ^", "+, -, * /, ^ или %");
+        var b = +prompt("Введите второе число");
+
+        switch (c) {
+            case ("+"):
+                show(sum, a, b);
+                break;
+            case ("-"):
+                show(diff, a, b);
+                break;
+            case ("*"):
+                show(multi, a, b);
+                break;
+            case ("/"):
+                while (b === 0) {
+                    b = +prompt("Введите второе число, отменное от 0");
+                }
+                show(dev, a, b);
+                break;
+            case ("%"):
+                while (b === 0) {
+                    b = +prompt("Введите второе число, отменное от 0");
+                }
+                show(modul, a, b);
+                break;
+            case ("^"):
+                show(power, a, b);
+                break;
+            default:
+                document.write("Вы ввели неверные данные!");
+                break;
+        }
+    </script>
+</body>
+</html>
