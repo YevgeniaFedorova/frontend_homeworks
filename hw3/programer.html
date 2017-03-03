@@ -6,23 +6,27 @@
 </head>
 <body>
     <script type="text/javascript">
+//      Написать конструктор Programer. У которого будут поля: name, age, position, langs, и методы для замены поля
+//      професии. Также переопредилить метод toString чтобы при выведении объекта он хорошо отображался.
+//      Сделать при помощи prototype
         function Programer(a, b, c, d) {
             this.name = a;
             this.age = b;
             this.position = c;
             this.langs = d;
-        }
-
-//        Programer.prototype.changePosition = function(field) { - я не очень понимаю, что этот метож должен делать, как именно нужно заменить поле профессии?
-//            return this.position = this.field;
-//        }
+            this.changePosition = function(newPosition) {
+                this.position = newPosition;
+            }
+        };
 
         Programer.prototype.toString = function () {
             return this.name + '<br>' + this.age + '<br>' + this.position + '<br>' + this.langs + '<br>';
-        }
+        };
 
-        var person1 = new Programer('John', 23, 'manager', 'eng');
-        var person2 = new Programer('Kate', 25, 'developer', 'ru');
+        var person1 = new Programer('John', 23, 'manager', 'Java');
+        var person2 = new Programer('Kate', 25, 'developer', 'PHP');
+
+        person1.changePosition('techlead');
 
         document.write(person1 + '<br>');
         document.write(person2 + '<br>');
