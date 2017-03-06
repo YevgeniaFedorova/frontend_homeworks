@@ -5,8 +5,8 @@
     <title>Table with users</title>
 </head>
 <body>
+    <div id='one'></div>
     <script>
-        //Далее следует кусок кода из предыдущей домашки
         var persons = [];
 
         var person = {
@@ -22,48 +22,45 @@
             persons.push(person);
         }
 
-        function say() {
-            document.write("Имя: " + person.name + "<br />");
-            document.write("Фамилия: " + person.sname + "<br />");
-            document.write("Возраст: " + person.age + "<br />");
-            document.write("<hr/>");
-        }
-
-        for(var i = 0; i < persons.length; i++)
-            for(item in persons[i])
-                console.log(persons[i][item]);//Вопрос! Почему мы здесь убрали фигурные скобки. После этого в консоли не отображается Object. Для этого и делали?
+        ask();
 
         function show(array) {
             for(var i = 0; i < array.length; i++)
                 for (j in array[i]) {
-                    document.write(array[i][j] + "<br>")
+                    document.write(j + ': ' + array[i][j] + "<br>")
                 }
         }
-        // Вызов функций.
-        ask();
-        say();
-        show(persons);
 
-
-        //Дальше идёт то, что мы записывали на уроке, и, соответственно, вопросы
-        list = [1, 2, 3, 4, 5, 6]; //Вот это н, поэтому я не могу разобраться как делать таблицу.
-        var table = createElement('table');
-        var row = createElement('tr');
-        table.appendChild(row);
-        var cell = createElement('td');
-
-        var elements = list.map(function(item) {
-            cell.innerHTML = item;
-            return cell;
-        });
-        row.appendChild(elements);
-        document.write(elements);
-
-        persons.map(function(item) {
-            for(j in item) {
-                document.write(j + "=" + item[j] + '<br>');
+        var quiz = prompt("Выберите действие 1, 2 или 3 для вывода данных опроса на экран", "1, 2 или 3");
+        //Почему не срабатывает do - while. Что я делаю не так?
+//        do {
+            switch(quiz) {
+                case("1"):
+                    show(persons);
+                    break;
+                case("2"):
+                    window.onload = function() {
+                        var table = document.createElement('table');
+                        persons.map(function(item) {
+                            var row = document.createElement('tr');
+                            table.appendChild(row);
+                            for(j in item) {
+                                var cell = document.createElement('td');
+                                cell.innerHTML = j + ":" + item[j];
+                                row.appendChild(cell);
+                            }
+                        });
+                        var container = document.getElementById('one');
+                        container.appendChild(table)};
+                    break;
+                case ("3"):
+                    document.write("Количество человек в базе: " + persons.length);
+                    break;
+                default:
+                    document.write("Вы не ввели неверніе данные");
+                    break;
             }
-        })
+//        } while (quiz !== null);
     </script>
 </body>
 </html>
