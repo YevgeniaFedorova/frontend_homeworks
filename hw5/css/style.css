@@ -1,0 +1,253 @@
+body {
+    min-width: 1400px;
+    font-family: 'Open Sans', 'Arial', sans-serif;
+}
+h1 {
+    font-family: 'Lora', 'Times New Roman', serif;
+    font-weight: 700;
+    font-size: 60px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    position: relative;
+    padding-bottom: 25px;
+    font-family: 'Lora', 'Times New Roman', serif;
+    font-weight: 700;
+    font-size: 42px;
+    text-transform: uppercase;
+    color: #3a3f4b;
+}
+
+h2:after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    background: #00a5ff;
+    width: 146px;
+    bottom: 0;
+    left: 517px;
+    right: 517px;
+}
+
+h3 {
+    font-family: 'Source Sans Pro', 'Arial', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #333333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h4 {
+    font-family: 'Open Sans', 'Arial', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #999999;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+.container {
+    width: 1180px;
+    margin: 0 auto;
+
+}
+.clearfix:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.f-left {
+    float: left;
+}
+.f-right {
+    float: right;
+}
+header {
+    min-height: 710px;
+    background: #4d6a84 url('../img/bg.png') no-repeat center;
+    background-size: cover;
+    margin-bottom: 65px;
+}
+.menu {
+    padding-top: 25px;
+    padding-bottom: 15px;
+    margin-bottom: 190px;
+}
+.logo {
+    float: left;
+
+}
+.nav {
+    float: right;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0;
+}
+
+.nav li {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 60px;
+    margin-top: 15px;
+    font-size: 14px;
+    text-align: center;
+}
+.nav li:last-child {
+    margin-right: 0;
+}
+
+.nav a:hover {
+    color: #00a5ff;
+}
+
+.welcome-text {
+    text-align: center;
+    color: #ffffff;
+}
+.welcome-subtitle {
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 90px;
+}
+.btn {
+    display: inline-block;
+    padding: 22px 60px;
+    background-color: #00a5ff;
+    border-radius: 50px;
+    font-size: 25px;
+    font-weight: 600;
+}
+.btn:hover {
+    background-color: #0d99e5;
+}
+.services,
+.portfolio,
+.about,
+.testimonials {
+    text-align: center;
+}
+
+.services-wrap {
+    margin: 100px 0 75px 0;
+
+}
+
+.title-underline {
+    height: 1px;
+    background: #818181;
+    width: 41px;
+    margin: 0 auto;
+}
+
+.service-description {
+    font-family: 'Source Sans Pro', 'Arial', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #999999;
+    letter-spacing: 1px;
+}
+.service-item {
+    box-sizing: border-box;
+    width: 25%;
+    padding-right: 30px;
+}
+
+.service-item:last-of-type {
+    padding-right: 0;
+}
+.round-bg {
+    height: 80px;
+    width: 80px;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 0 auto;
+    color: #00a5ff;
+    background-color: #f5f6f8;
+    border-radius: 50%;
+}
+.round-bg .fa {
+    font-size: 40px;
+}
+
+.portfolio-wrap {
+    margin-bottom: 40px;
+}
+
+.portfolio {
+    background-color: #f5f6f8;
+    padding-top: 5px;
+}
+.filter-items {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    list-style: none;
+}
+
+.filter-items li {
+    display: inline-block;
+    font-family: 'Open Sans', 'Arial', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+    vertical-align: top;
+    margin: 20px 30px 35px 0;
+}
+
+.filter-items li:last-child {
+    margin-right: 0;
+}
+
+.filter-items a {
+    display: block;
+    padding: 0 15px 5px 15px;
+    color: #999999;
+}
+.filter-items a:hover {
+    color: #00a5ff;
+}
+
+.filter-items .active a {
+    position: relative;
+    color: #00a5ff;
+}
+.filter-items .active a:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+    right: 15px;
+    height: 2px;
+    background: #00a5ff;
+}
+
+.portfolio-item {
+    width: 380px;
+    margin-left: 0;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-align: left;
+    background-color: #f4f5f9;
+    box-shadow: 0 0 3px 3px #cfccca;
+}
+
+.portfolio-item:nth-child(3n) {
+    margin-right: 0;
+}
+
+.portfolio-footer {
+    padding-left: 25px;
+}
+
+.btn-portfolio {
+    padding: 18px 65px;
+    text-transform: uppercase;
+    margin-bottom: 75px;
+}
