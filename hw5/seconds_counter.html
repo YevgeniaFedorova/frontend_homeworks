@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Seconds Counter</title>
+    <script>
+        window.onload = function () {
+            var counter = 0;
+            var intervalHandler;
+
+            function count(){
+                get("output").innerHTML = counter;
+                counter++;
+            }
+
+            get("startButton").onclick = function () {
+                intervalHandler = setInterval(count, 1000);
+            }
+
+            get("stopButton").onclick = function () {
+                clearInterval(intervalHandler);
+            }
+            get("resetButton").onclick = function () {
+                clearInterval(intervalHandler);
+                get("output").innerHTML = '-';
+                counter = 1;
+            }
+
+        }
+
+        // пользовательская функция для получения элементов страницы по id
+        var get = function (id){
+            return document.getElementById(id);
+        }
+    </script>
+</head>
+<body>
+    <p id="output">-</p>
+    <input id="startButton" type="button" value="Start" />
+    <input id="stopButton" type="button" value="Stop" />
+    <input id="resetButton" type="button" value="Reset" />
+</body>
+</html>
