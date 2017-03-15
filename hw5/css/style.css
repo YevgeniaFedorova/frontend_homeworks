@@ -175,6 +175,7 @@ header {
     font-size: 40px;
 }
 
+
 .portfolio-wrap {
     margin-bottom: 40px;
 }
@@ -182,6 +183,7 @@ header {
 .portfolio {
     background-color: #f5f6f8;
     padding-top: 5px;
+    margin-bottom: 65px;
 }
 .filter-items {
     margin: 0;
@@ -250,4 +252,65 @@ header {
     padding: 18px 65px;
     text-transform: uppercase;
     margin-bottom: 75px;
+}
+
+.partners-wrapper {
+    margin-top: 75px;
+    margin-bottom: 100px;
+}
+
+.partner {
+    width: 16%;
+}
+.partner:nth-child(4) {
+    width: 19%;
+}
+.partner:nth-child(6) {
+    width: 13%;
+}
+
+.sprite {
+    background-image: url("../img/sprite.png");
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-bakery-logo {
+    width: 125px;
+    height: 120px;
+    background-position: 0 0;
+}
+
+.sprite-cavalier-logo {
+    width: 130px;
+    height: 120px;
+    background-position: -200px 0;
+}
+
+.sprite-landlock-logo {
+    width: 160px;
+    height: 120px;
+    background-position: -620px 0;
+}
+
+.sprite-spectrum-logo {
+    width: 110px;
+    height: 120px;
+    background-position: -845px 0;
+}
+
+.sprite-homeenergy-logo {
+    width: 155px;
+    height: 120px;
+    background-position: -1015px 0;
+}
+
+.harvest {
+    padding-top: 20px;
+    margin-right: 4%;
+}
+
+.testimonials {
+    background-color: #f5f6f8;
+    padding-top: 20px;
 }
